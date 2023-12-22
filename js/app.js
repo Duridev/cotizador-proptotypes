@@ -38,5 +38,20 @@ function eventListeners() {
 function cotizarSeguro(e) {
     e.preventDefault();
 
+    // Leer la marca seleccionada
+    const marca = document.querySelector('#marca').value;
+
+    // Leer el año seleccionado
+        const year = document.querySelector('#year').value;
+
+    // Leer el tipo de cobertura (de tipo radio)
+    const tipo = document.querySelector('input[name="tipo"]:cheked').value;
+
+    if( marca === '' || year === '' || tipo === || ) {
+
+    } else {
+        
+    }
+
     console.log('Cotizando...');
 }
