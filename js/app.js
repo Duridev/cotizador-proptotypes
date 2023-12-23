@@ -22,6 +22,24 @@ UI.prototype.llenarOpciones = () => {
     };
 };
 
+//Muestra alertas en pantalla
+UI.prototype.mostrarMensaje = (mensaje, tipo) => {
+
+    const div = document.createElement('div');
+
+    div.classList.add('mensaje', 'mt-10')
+
+    if(tipo === 'error') {
+        div.classList.add('error')
+    } else {
+        div.classList.add('correcto');
+        div.textContent = mensaje;
+
+        // Insertar en el HTML
+        const formulario = document.querySelector('#cotizar-seguro');
+    };
+};
+
 // Instanciar UI
 const ui = new UI()
 
