@@ -1,10 +1,10 @@
+
 // CONSTRUCTOR  
 function Seguro(marca, year, tipo) {
     this.marca = marca;
     this.year = year;
     this.tipo = tipo;
 };
-
 function UI() {};
 
 // Llena las opciones de los años
@@ -27,7 +27,7 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 
     const div = document.createElement('div');
 
-    div.classList.add('mensaje', 'mt-10')
+//    div.classList.add('mensaje', 'mt-10')
 
     if(tipo === 'error') {
         div.classList.add('error')
@@ -73,11 +73,13 @@ function cotizarSeguro(e) {
     const tipo = document.querySelector('input[name="tipo"]:checked').value;
 
     if( marca === '' || year === '' || tipo === '' ) {
-        ui.mostrarMensaje('Todos los campos son obligatorios', 'error');
-        return;
+         ui.mostrarMensaje('Todos los campos son obligatorios', 'error');
+         return;
     }
 
     ui.mostrarMensaje('Cotizando...', 'exito');
 
-    //
+    //Instanciar el seguro
+
+    //Utilizar el Prototype que va a cotizar.
 }
